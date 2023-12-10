@@ -25,9 +25,11 @@ def passwd_policies():
 
 def misc_policies():
     print("Setting miscellaneous policies...")
-    run_command("sudo sed -i 's/!authenticate/authenticate/' /etc/sudoers")
-    run_command("sudo sed -i 's/net.ipv4.ip_forward=1/net.ipv4.ip_forward=0' /etc/sysctl.conf")
-    
+    try:
+        run_command("sudo sed -i 's/!authenticate/authenticate/' /etc/sudoers")
+        run_command("sudo sed -i 's/net.ipv4.ip_forward=1/net.ipv4.ip_forward=0' /etc/sysctl.conf")
+    except Exception as e:
+        print("Error:", e)
     clear()
 
 def perms():
