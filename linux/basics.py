@@ -1,10 +1,8 @@
 import subprocess
 import time
+from util import run_command
+from util import clear
 
-def run_command(command):
-    subprocess.run(command, shell=True, check=True)
-def clear():
-    run_command("clear")
 def forensic_questions():
     try:
         print("Opening Forensic Questions")

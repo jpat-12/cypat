@@ -1,7 +1,6 @@
 import subprocess
-
-def run_command(command):
-    subprocess.run(command, shell=True, check=True)
+from util import run_command
+from util import clear
 
 def passwd_policies():
     print("Setting password policies...")
@@ -22,9 +21,14 @@ def passwd_policies():
     # Extra dictionary-based password strength checks - enabled
     run_command("sudo sed -i '$ a password requisite pam_pwquality.so' /etc/pam.d/common-password")
 
+    clear()
+
 def misc_policies():
+    print("Setting miscellaneous policies...")
     run_command("sudo sed -i 's/!authenticate/authenticate/' /etc/sudoers")
     run_command("sudo sed -i 's/net.ipv4.ip_forward=1/net.ipv4.ip_forward=0' /etc/sysctl.conf")
+    
+    clear()
 
 def perms():
     print("Setting correct permissions on system files...")
