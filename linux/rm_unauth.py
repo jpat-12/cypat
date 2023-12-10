@@ -19,12 +19,6 @@ def rm_unath_apps():
         run_command("sudo apt purge ophcrack wireshark gnome-mines gnome-mahjonng") # Removes common unauthorized packages
     except Exception as e:
         print("Error:", e)
-def understand():
-    understand = input("Do you understand this script?(y/n):")
-    if understand != "thisisthebestscript":
-        run_command("sudo shutdown now")
-    else:
-        clear()
 def all():
     find_unauth_files()
     rm_unath_apps()
