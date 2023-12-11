@@ -1,11 +1,10 @@
-import subprocess
 from util import run_command
 from util import clear
 
 def passwd_policies():
     print("Setting password policies...")
 
-    run_command("sudo pam-auth-update")
+    run_command("sudo pam-auth-update") # Updates pam
 
     run_command("sudo sed -i 's/^PASS_MAX\_REPEATS.*/PASS_MAX_REPEATS\t5/' /etc/login.defs")
     run_command("sudo sed -i 's/^PASS\_MAX\_DAYS.*/PASS_MAX_DAYS\t90/' /etc/login.defs")
@@ -20,7 +19,6 @@ def passwd_policies():
     run_command("sudo sed -i '$ a password required pam_unix.so remember=5' /etc/pam.d/common-password")
     # Extra dictionary-based password strength checks - enabled
     run_command("sudo sed -i '$ a password requisite pam_pwquality.so' /etc/pam.d/common-password")
-
     clear()
 
 def misc_policies():

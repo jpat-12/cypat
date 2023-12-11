@@ -5,4 +5,4 @@ def run_command(command):
     subprocess.run(command, shell=True, check=True)
 
 def clear():
-    run_command("clear")
+    run_command("clear") # Clears screen
