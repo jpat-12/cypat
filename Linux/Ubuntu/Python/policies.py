@@ -24,7 +24,11 @@ def passwd_policies():
 def misc_policies():
     print("Setting miscellaneous policies...")
     try:
+        # TODO: Fix formatting on sudo authentication
+        # Sudo requires authentication
         run_command("sudo sed -i 's/!authenticate/authenticate/' /etc/sudoers")
+        # TODO: Fix IPv4 forwarding
+        #IPv4 forwarding - disabled
         run_command("sudo sed -i 's/net.ipv4.ip_forward=1/net.ipv4.ip_forward=0' /etc/sysctl.conf")
     except Exception as e:
         print("Error:", e)
@@ -34,7 +38,6 @@ def perms():
     print("Setting correct permissions on system files...")
     run_command("sudo chmod 640 /etc/shadow")
     
-
 def all():
     passwd_policies()
     misc_policies()

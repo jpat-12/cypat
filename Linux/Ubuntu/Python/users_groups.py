@@ -9,7 +9,7 @@ def manage_users():
     authadmns = []
     authusrs = []
 
-    while True: # Filling authorized admin list
+    while True: # Fill authorized admin list
         authadmn = input("Enter an authorized admin (press q to stop, r to remove last input)): ").lower()
         if authadmn == "q": break
         elif authadmn == "r":
@@ -17,7 +17,7 @@ def manage_users():
             continue
         authadmns.append(authadmn) # Adds the authadmn variable to the authorized admins array
 
-    while True: # Filling authorized user list
+    while True: # Fill authorized user list
         authusr = input("Enter an authorized user (press q to stop, r to remove last input)): ").lower()
         if authusr == "q": break
         elif authusr == "r":
@@ -25,7 +25,7 @@ def manage_users():
             continue
         authusrs.append(authusr) # Adds the authusr variable to the authorized users array
 
-    # Cuts the output into parts by ":" and shows only the first part of each line
+    # Cuts the output into parts by ":" and shows only the first part of each line which is username
     usrlist = subprocess.run(["cut", "-d:", "-f1", "/etc/passwd"], capture_output=True, text=True).stdout.split()
     
     # Declares array of default users that we don't want to mess with
@@ -57,25 +57,23 @@ def manage_users():
             elif "sudo" not in groups and usr in authadmns: # If they do not have admin permissions and they are an authorized admin
                 print(f"Adding {usr} to group 'sudo'")
                 run_command(f"sudo adduser {usr} sudo") # Adds the user to group sudo, adding admin permissions
-        except Exception as e: print(e)
+        except Exception as e: print("Error:", e)
 
     for authadm in authadmns:
         if authadm not in usrlist: 
             print("Adding user {authadm}")
             try:
                 subprocess.run(["sudo", "adduser", authadm], input=b"Cyb3rP@triot24!\nCyb3rP@triot24!\n\n\n\n\n\n\n")
-            except Exception as e:
-                print("Error:", e)
+            except Exception as e: print("Error:", e)
+
     for authusr in authusrs:
         if authusr not in usrlist: 
             try:
                 subprocess.run(["sudo", "adduser", authusr], input=b"Cyb3rP@triot24!\nCyb3rP@triot24!\n\n\n\n\n\n\n")
-            except Exception as e:
-                print("Error:", e)
+            except Exception as e: print("Error:", e)
 
     while True:
         usrtoadd = input("Enter a user to add (press q to stop, r to remove last input)): ").lower()
-
         if usrtoadd == "q": break
         elif usrtoadd == "r":
             usrtoadd.pop()
@@ -88,15 +86,14 @@ def manage_users():
     run_command("sudo passwd -l root")
     clear()
     print("Users managed")
+
 def manage_groups():
     next_step = input("Press enter to proceed to next step(managing groups), type 'skip' to skip this step")
     if next_step == "skip": return   
+    
     while True:
-        grouptoadd = input("Enter a group to add (press q to stop, r to remove last input): ").lower()
+        grouptoadd = input("Enter a group to add (press q to stop): ").lower()
         if grouptoadd == "q": break
-        elif grouptoadd == "r":
-            grouptoadd.pop()
-            continue
         try:
             run_command(f"sudo addgroup {grouptoadd}")
         except Exception as e:
@@ -115,6 +112,7 @@ def manage_groups():
             print("Error:", e)
     clear()
     print("Groups managed")
+    
 def all():
     manage_users()
     manage_groups()
