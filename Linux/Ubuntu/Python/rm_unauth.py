@@ -9,16 +9,24 @@ def find_unauth_files():
     except Exception as e:
         print(e)
 
+    # TODO: Fix deleting files
+    '''
     for file_path in file_paths:
         print(file_paths)
         rmfile = input("Do you want to remove the file at the path displayed?(y/n) ")
         if rmfile == "y":
-            run_command(f"rm {file_path}")
+            try:
+                run_command(f"rm -r {file_path}")
+            except Exception as e:
+                print("Error:", e)
+    '''
+
 def rm_unath_apps():
     try:
         run_command("sudo apt purge ophcrack wireshark gnome-mines gnome-mahjonng") # Removes common unauthorized packages
     except Exception as e:
         print("Error:", e)
+
 def all():
     find_unauth_files()
     rm_unath_apps()
