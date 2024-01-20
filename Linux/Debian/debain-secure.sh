@@ -271,4 +271,4 @@ for application in $keylogging_applications; do
 done
 
 echo "This script is complete" 
-echo "Please run < cd /root/Secure-Linux && /root/cypat/Linux/Debian/user-manager.sh >"
+echo "Please run < cd /tmp/cypat/Linux/Debian/ && ./user-manager.sh >"
