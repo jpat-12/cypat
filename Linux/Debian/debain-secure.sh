@@ -74,7 +74,7 @@ echo "-----------------------"
 echo "Task 4: FTP Server"
 echo "-----------------------"
 # Prompt the user for their choice
-echo "Would you like to install or remove the FTP server from Ubuntu 22.04?"
+echo "Would you like to install or remove the FTP server from Debian?"
 echo "Enter 'install' or 'remove':"
 read choice
 # Check the user's choice and perform the corresponding action
@@ -107,9 +107,6 @@ else
   echo "Invalid choice. Please enter 'install' or 'remove'."
 fi
 sudo systemctl status vsftpd
-#echo "Type "sudo systemctl status vsftpd" to see if FTP is active or not."
-#echo "Press any button to continue" 
-#read answer
 
 clear
 echo "-----------------------"
@@ -131,36 +128,8 @@ echo "Get a list of all installed apps"
 apps=$(dpkg --get-selections | awk '{print $1}')
 echo "disregard the next few lines "
 
-
-# Define a function to prompt the user if they want to remove an app
-#function prompt_user() {
-#    app_name=$1
-#
-#   # Check if the app is installed
-#    if [ $(dpkg-query -s "$app_name" 2>/dev/null | grep -c "Status: install ok installed") -eq 1 ]; then
-#        # Get the app description
-#        app_description=$(apt show "$app_name" | grep -Po '(?<=Description: ).*')
-#
-#        # Prompt the user if they want to remove the app
-#        echo "Would you like to remove the app '$app_name'? ($app_description)"
-#        read -p "[y/N] " response
-#
-#        # Remove the app if the user confirms
-#        if [ "$response" == "y" ]; then
-#            sudo apt remove "$app_name"
-#   fi
-#}
-
-# Loop through the non-default apps
-#for app in $apps; do
-#    # Skip essential apps
-#    if [[ "$app" == "apt" || "$app" == "apt-utils" || "$app" == "base-files" || "$app" == "bash" || "$app" == "coreutils" || "$app" == "cpio" || "$app" == "dash" || "$app" == "dpkg" || "$app" == "e2fsprogs" || "$app" == "findutils" || "$app" == "gawk" || "$app" == "grep" || "$app" == "gzip" || "$app" == "iproute2" || "$app" == "less" || "$app" == "libc6" || "$app" == "make" || "$app" == "man-db" || "$app" == "mawk" || "$app" == "mount" || "$app" == "neofetch" || "$app" == "net-tools" || "$app" == "openssh-client" || "$app" == "openssh-server" || "$app" == "openssl" || "$app" == "patch" || "$app" == "perl" || "$app" == "procinfo" || "$app" == "psmisc" || "$app" == "sed" || "$app" == "sensible-utils" || "$app" == "sudo" || "$app" == "tar" || "$app" == "util-linux" || "$app" == "vim" ]]; then
-#        continue
-#    fi
-#
-#    # Prompt the user if they want to remove the app
-#    prompt_user "$app"
-#done
+# (The rest of the script remains unchanged)
+# ...
 
 clear
 echo "-----------------------"
@@ -248,7 +217,6 @@ echo "-----------------------"
 sudo sed -i 's/^#*\s*store\-cleartext\-passwords.*/store-cleartext-passwords\ =\ no/' /etc/samba/smb.conf
 sudo service smbd restart
 
-
 clear
 echo "-----------------------"
 echo "Task 9: Account lockout policy"
@@ -274,7 +242,7 @@ echo "-----------------------"
 echo "Software and Updates policy"
 echo "Setting software and updates policy..."
 
-echo "Important security updates (xenial-security) - Enable"
+echo "Important security updates (buster-security) - Enable"
 sudo sed -i 's/^# deb-src/deb-src/' /etc/apt/sources.list
 sudo sed -i 's/^# deb/deb/' /etc/apt/sources.list
 sudo apt-get update
@@ -302,6 +270,5 @@ for application in $keylogging_applications; do
     sudo apt remove "$application"
 done
 
-
 echo "This script is complete" 
-echo "Please run < cd /root/Secure-Linux && /root/cypat/Linux/Ubunty/Shell/user-manager.sh >"
+echo "Please run < cd /root/Secure-Linux && /root/cypat/Linux/Debian/user-manager.sh >"
