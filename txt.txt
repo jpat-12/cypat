@@ -1,3 +1,9 @@
+sudo usermod -aG sudo richard
+sudo usermod -aG sudo desmond
+sudo usermod -aG sudo jess
+sudo usermod -aG sudo lucas
+
+
 sudo adduser eyelessdog
 sudo adduser ghostgirl
 sudo adduser masked
