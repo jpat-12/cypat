@@ -1,271 +1,48 @@
-root@assurance:~# cat /var/log/auth.log
-May 19 00:51:59 assurance systemd-logind[1004]: New seat seat0.
-May 19 00:51:59 assurance systemd-logind[1004]: Watching system buttons on /dev/input/event0 (Power Button)
-May 19 00:51:59 assurance systemd-logind[1004]: Watching system buttons on /dev/input/event1 (AT Translated Set 2 keyboard)
-May 19 00:52:01 assurance CRON[1122]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 00:52:01 assurance CRON[1122]: pam_unix(cron:session): session closed for user root
-May 19 00:52:01 assurance lightdm: pam_unix(lightdm-autologin:session): session opened for user sigurd(uid=1001) by (uid=0)
-May 19 00:52:01 assurance systemd-logind[1004]: New session c1 of user sigurd.
-May 19 00:52:01 assurance systemd: pam_unix(systemd-user:session): session opened for user sigurd(uid=1001) by (uid=0)
-May 19 00:52:03 assurance gnome-keyring-daemon[1378]: couldn't access control socket: /run/user/1001/keyring/control: No such file or directory
-May 19 00:52:04 assurance gnome-keyring-daemon[1378]: The Secret Service was already initialized
-May 19 00:52:04 assurance polkitd(authority=local): Registered Authentication Agent for unix-session:c1 (system bus name :1.44 [/usr/lib/x86_64-linux-gnu/polkit-mate/polkit-mate-authentication-agent-1], object path /org/mate/PolicyKit1/AuthenticationAgent, locale en_US.UTF-8)
-May 19 00:52:05 assurance gnome-keyring-daemon[1378]: The PKCS#11 component was already initialized
-May 19 00:52:05 assurance gnome-keyring-daemon[1378]: The SSH agent was already initialized
-May 19 00:52:27 assurance dbus-daemon[635]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
-May 19 00:52:32 assurance gnome-keyring-daemon[1378]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
-May 19 00:52:57 assurance dbus-daemon[635]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
-May 19 00:53:01 assurance CRON[1966]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 00:53:01 assurance CRON[1966]: pam_unix(cron:session): session closed for user root
-May 19 00:53:14 assurance sudo:   sigurd : TTY=pts/0 ; PWD=/home/sigurd/Desktop ; USER=root ; COMMAND=/usr/bin/su
-May 19 00:53:14 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
-May 19 00:53:14 assurance su: (to root) root on pts/1
-May 19 00:53:14 assurance su: pam_unix(su:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:53:20 assurance adcli: GSSAPI client step 1
-May 19 00:53:20 assurance adcli: message repeated 2 times: [ GSSAPI client step 1]
-May 19 00:54:01 assurance CRON[2025]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 00:54:01 assurance CRON[2025]: pam_unix(cron:session): session closed for user root
-May 19 00:55:01 assurance CRON[2034]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 00:55:01 assurance CRON[2034]: pam_unix(cron:session): session closed for user root
-May 19 00:55:25 assurance sudo:     root : TTY=pts/1 ; PWD=/ ; USER=root ; COMMAND=/usr/local/bin/apt install git
-May 19 00:55:25 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:55:27 assurance sudo:   sigurd : PWD=/home/sigurd ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
-May 19 00:55:27 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
-May 19 00:55:27 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:55:36 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:01 assurance CRON[2157]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 00:56:01 assurance CRON[2157]: pam_unix(cron:session): session closed for user root
-May 19 00:56:44 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/local/bin/apt install ufw
-May 19 00:56:44 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:45 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:45 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/sbin/ufw default deny incoming
-May 19 00:56:45 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:45 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:45 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/sbin/ufw default allow outgoing
-May 19 00:56:45 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:45 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:45 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/sbin/ufw enable
-May 19 00:56:45 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:46 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:46 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/sbin/ufw allow ssh
-May 19 00:56:46 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:46 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:46 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/sbin/ufw enable
-May 19 00:56:46 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:47 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:47 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/netstat -tulpn
-May 19 00:56:47 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:47 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:47 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/sbin/ufw deny (only/tcp
-May 19 00:56:47 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:47 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:47 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/sbin/ufw deny 137/tcp
-May 19 00:56:47 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:47 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:47 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/sbin/ufw deny 139/tcp
-May 19 00:56:47 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:48 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:48 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/sbin/ufw deny 631/tcp
-May 19 00:56:48 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:48 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:48 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/sbin/ufw deny 3306/tcp
-May 19 00:56:48 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:48 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:48 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/sbin/ufw deny 5353/tcp
-May 19 00:56:48 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:48 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:48 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/sbin/ufw deny 36402/tcp
-May 19 00:56:48 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:49 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:49 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/local/bin/apt update
-May 19 00:56:49 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:53 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:53 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/local/bin/apt install openssh-server -y
-May 19 00:56:53 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:53 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:53 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
-May 19 00:56:53 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:53 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:53 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/sed -i s/PermitRootLogin yes/PermitRootLogin no/ /etc/ssh/sshd_config
-May 19 00:56:53 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:53 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:53 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/systemctl start ssh
-May 19 00:56:53 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:53 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:57 assurance sudo:   sigurd : PWD=/home/sigurd ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
-May 19 00:56:57 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
-May 19 00:56:57 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:56:58 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
-May 19 00:56:58 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:56:58 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:01 assurance CRON[2924]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 00:57:01 assurance CRON[2924]: pam_unix(cron:session): session closed for user root
-May 19 00:57:41 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/local/bin/apt install vsftpd
-May 19 00:57:41 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:43 assurance groupadd[2982]: group added to /etc/group: name=ftp, GID=141
-May 19 00:57:43 assurance groupadd[2982]: group added to /etc/gshadow: name=ftp
-May 19 00:57:44 assurance groupadd[2982]: new group: name=ftp, GID=141
-May 19 00:57:44 assurance useradd[2988]: new user: name=ftp, UID=132, GID=141, home=/srv/ftp, shell=/usr/sbin/nologin, from=none
-May 19 00:57:44 assurance usermod[2995]: change user 'ftp' password
-May 19 00:57:45 assurance chage[3007]: changed password expiry for ftp
-May 19 00:57:46 assurance chfn[3011]: changed user 'ftp' information
-May 19 00:57:48 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:48 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/systemctl start vsftpd
-May 19 00:57:48 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:48 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:48 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/systemctl enable vsftpd
-May 19 00:57:48 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:50 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:50 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/systemctl status vsftpd
-May 19 00:57:50 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:50 assurance su: (to sigurd) root on none
-May 19 00:57:50 assurance su: pam_unix(su:session): session opened for user sigurd(uid=1001) by (uid=0)
-May 19 00:57:50 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:50 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/local/bin/apt remove ophcrack
-May 19 00:57:50 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:50 assurance su: pam_unix(su:session): session closed for user sigurd
-May 19 00:57:51 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:51 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/local/bin/apt remove wireshark -y
-May 19 00:57:51 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:52 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/local/bin/apt autoremove -y
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:52 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/systemctl stop nginx apache2
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:52 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/systemctl disable nginx
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:52 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/systemctl stop apache2
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:52 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/systemctl disable apache2
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:52 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/systemctl stop avahi-daemon
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:57:52 assurance sudo:     root : TTY=pts/1 ; PWD=/tmp/cypat/Linux/Debian ; USER=root ; COMMAND=/usr/bin/systemctl disable avahi-daemon
-May 19 00:57:52 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 00:57:54 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:58:01 assurance CRON[3394]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 00:58:01 assurance CRON[3394]: pam_unix(cron:session): session closed for user root
-May 19 00:58:27 assurance sudo:   sigurd : PWD=/home/sigurd ; USER=root ; COMMAND=/usr/lib/linuxmint/mintUpdate/dpkg_lock_check.sh
-May 19 00:58:27 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
-May 19 00:58:27 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 00:59:01 assurance CRON[3441]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 00:59:01 assurance CRON[3441]: pam_unix(cron:session): session closed for user root
-May 19 01:00:01 assurance CRON[3450]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:00:01 assurance CRON[3450]: pam_unix(cron:session): session closed for user root
-May 19 01:01:01 assurance CRON[3459]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:01:01 assurance CRON[3459]: pam_unix(cron:session): session closed for user root
-May 19 01:02:01 assurance CRON[3471]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:02:01 assurance CRON[3471]: pam_unix(cron:session): session closed for user root
-May 19 01:02:21 assurance gnome-keyring-daemon[1378]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
-May 19 01:02:46 assurance dbus-daemon[635]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
-May 19 01:03:01 assurance CRON[3648]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:03:01 assurance CRON[3648]: pam_unix(cron:session): session closed for user root
-May 19 01:04:01 assurance CRON[3662]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:04:01 assurance CRON[3662]: pam_unix(cron:session): session closed for user root
-May 19 01:04:33 assurance sudo:   sigurd : TTY=pts/2 ; PWD=/home/sigurd/Desktop ; USER=root ; COMMAND=/usr/bin/su
-May 19 01:04:33 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
-May 19 01:04:33 assurance su: (to root) root on pts/3
-May 19 01:04:33 assurance su: pam_unix(su:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 01:04:39 assurance sudo:     root : TTY=pts/3 ; PWD=/root ; USER=root ; COMMAND=/usr/sbin/visudo
-May 19 01:04:39 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 01:05:01 assurance CRON[3692]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:05:01 assurance CRON[3692]: pam_unix(cron:session): session closed for user root
-May 19 01:05:15 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 01:05:43 assurance sudo:     root : TTY=pts/3 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/grep -E ^%|^@ /etc/sudoers /etc/sudoers.d/0pwfeedback /etc/sudoers.d/mintdrivers /etc/sudoers.d/mintupdate /etc/sudoers.d/README /etc/sudoers.d/zfs
-May 19 01:05:43 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 01:05:43 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 01:06:01 assurance CRON[3705]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:06:01 assurance CRON[3705]: pam_unix(cron:session): session closed for user root
-May 19 01:07:01 assurance CRON[3720]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:07:01 assurance CRON[3720]: pam_unix(cron:session): session closed for user root
-May 19 01:07:50 assurance su: (to sigurd) root on none
-May 19 01:07:50 assurance su: pam_unix(su:session): session opened for user sigurd(uid=1001) by (uid=0)
-May 19 01:07:50 assurance su: pam_unix(su:session): session closed for user sigurd
-May 19 01:08:01 assurance CRON[3815]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:08:01 assurance CRON[3815]: pam_unix(cron:session): session closed for user root
-May 19 01:08:08 assurance gnome-keyring-daemon[1378]: asked to register item /org/freedesktop/secrets/collection/login/1, but it's already registered
-May 19 01:08:33 assurance dbus-daemon[635]: [system] Failed to activate service 'org.bluez': timed out (service_start_timeout=25000ms)
-May 19 01:09:01 assurance CRON[3989]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:09:01 assurance CRON[3989]: pam_unix(cron:session): session closed for user root
-May 19 01:10:01 assurance CRON[4036]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:10:01 assurance CRON[4036]: pam_unix(cron:session): session closed for user root
-May 19 01:11:01 assurance CRON[4045]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:11:01 assurance CRON[4045]: pam_unix(cron:session): session closed for user root
-May 19 01:12:01 assurance CRON[4057]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:12:01 assurance CRON[4057]: pam_unix(cron:session): session closed for user root
-May 19 01:13:01 assurance CRON[4066]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:13:01 assurance CRON[4066]: pam_unix(cron:session): session closed for user root
-May 19 01:14:01 assurance CRON[4075]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:14:01 assurance CRON[4075]: pam_unix(cron:session): session closed for user root
-May 19 01:15:01 assurance CRON[4125]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:15:01 assurance CRON[4125]: pam_unix(cron:session): session closed for user root
-May 19 01:16:01 assurance CRON[4179]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:16:01 assurance CRON[4179]: pam_unix(cron:session): session closed for user root
-May 19 01:17:01 assurance CRON[4215]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:17:01 assurance CRON[4214]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:17:01 assurance CRON[4215]: pam_unix(cron:session): session closed for user root
-May 19 01:17:01 assurance CRON[4214]: pam_unix(cron:session): session closed for user root
-May 19 01:17:08 assurance su: pam_unix(su:session): session closed for user root
-May 19 01:17:08 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 01:17:12 assurance sudo:   sigurd : TTY=pts/2 ; PWD=/home/sigurd/Desktop ; USER=root ; COMMAND=/usr/bin/su
-May 19 01:17:12 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by (uid=1001)
-May 19 01:17:12 assurance su: (to root) root on pts/3
-May 19 01:17:12 assurance su: pam_unix(su:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 01:18:01 assurance CRON[4254]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:18:01 assurance CRON[4254]: pam_unix(cron:session): session closed for user root
-May 19 01:19:01 assurance sudo:     root : TTY=pts/3 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/grep lootbut /etc/shadow
-May 19 01:19:01 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 01:19:01 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 01:19:01 assurance CRON[4268]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:19:01 assurance CRON[4268]: pam_unix(cron:session): session closed for user root
-May 19 01:19:20 assurance sudo:     root : TTY=pts/3 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/grep spider /etc/shadow
-May 19 01:19:20 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 01:19:20 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 01:20:01 assurance CRON[4280]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:20:01 assurance CRON[4280]: pam_unix(cron:session): session closed for user root
-May 19 01:21:01 assurance CRON[4291]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:21:01 assurance CRON[4291]: pam_unix(cron:session): session closed for user root
-May 19 01:22:01 assurance CRON[4307]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:22:01 assurance CRON[4307]: pam_unix(cron:session): session closed for user root
-May 19 01:23:01 assurance CRON[4322]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:23:01 assurance CRON[4322]: pam_unix(cron:session): session closed for user root
-May 19 01:23:04 assurance sudo:     root : TTY=pts/3 ; PWD=/root ; USER=root ; COMMAND=/usr/bin/grep lootbug /etc/shadow
-May 19 01:23:04 assurance sudo: pam_unix(sudo:session): session opened for user root(uid=0) by sigurd(uid=0)
-May 19 01:23:04 assurance sudo: pam_unix(sudo:session): session closed for user root
-May 19 01:24:01 assurance CRON[4338]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:24:02 assurance CRON[4338]: pam_unix(cron:session): session closed for user root
-May 19 01:25:01 assurance CRON[4374]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:25:01 assurance CRON[4374]: pam_unix(cron:session): session closed for user root
-May 19 01:26:01 assurance CRON[4383]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:26:01 assurance CRON[4383]: pam_unix(cron:session): session closed for user root
-May 19 01:27:01 assurance CRON[4393]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:27:01 assurance CRON[4393]: pam_unix(cron:session): session closed for user root
-May 19 01:28:01 assurance CRON[4410]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:28:01 assurance CRON[4410]: pam_unix(cron:session): session closed for user root
-May 19 01:29:01 assurance CRON[4421]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:29:01 assurance CRON[4421]: pam_unix(cron:session): session closed for user root
-May 19 01:30:01 assurance CRON[4433]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:30:01 assurance CRON[4433]: pam_unix(cron:session): session closed for user root
-May 19 01:31:01 assurance CRON[4446]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:31:01 assurance CRON[4446]: pam_unix(cron:session): session closed for user root
-May 19 01:32:01 assurance CRON[4456]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:32:01 assurance CRON[4456]: pam_unix(cron:session): session closed for user root
-May 19 01:33:01 assurance CRON[4465]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:33:01 assurance CRON[4465]: pam_unix(cron:session): session closed for user root
-May 19 01:34:01 assurance CRON[4475]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:34:01 assurance CRON[4475]: pam_unix(cron:session): session closed for user root
-May 19 01:35:01 assurance CRON[4484]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:35:01 assurance CRON[4484]: pam_unix(cron:session): session closed for user root
-May 19 01:36:01 assurance CRON[4493]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:36:01 assurance CRON[4493]: pam_unix(cron:session): session closed for user root
-May 19 01:37:01 assurance CRON[4515]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:37:01 assurance CRON[4515]: pam_unix(cron:session): session closed for user root
-May 19 01:38:01 assurance CRON[4524]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
-May 19 01:38:01 assurance CRON[4524]: pam_unix(cron:session): session closed for user root
-root@assurance:~# 
+accounts-daemon.service     loaded active running Accounts Service
+acpid.service               loaded active running ACPI event daemon
+ccsclient.service           loaded active running CCS Client Service
+cron.service                loaded active running Regular background program processing daemon
+cups-browsed.service        loaded active running Make remote CUPS printers available locally
+cups.service                loaded active running CUPS Scheduler
+dbus.service                loaded active running D-Bus System Message Bus
+fail2ban.service            loaded active running Fail2Ban Service
+fwupd.service               loaded active running Firmware update daemon
+getty@tty1.service          loaded active running Getty on tty1
+irqbalance.service          loaded active running irqbalance daemon
+kerneloops.service          loaded active running Tool to automatically collect and submit kernel crash signatures
+lightdm.service             loaded active running Light Display Manager
+mariadb.service             loaded active running MariaDB 10.6.7 database server
+minetest-server.service     loaded active running Minetest multiplayer server minetest.conf server config
+ModemManager.service        loaded active running Modem Manager
+named.service               loaded active running BIND Domain Name Server
+networkd-dispatcher.service loaded active running Dispatcher daemon for systemd-networkd
+NetworkManager.service      loaded active running Network Manager
+nmbd.service                loaded active running Samba NMB Daemon
+oddjobd.service             loaded active running privileged operations for unprivileged applications
+open-vm-tools.service       loaded active running Service for virtual machines hosted on VMware
+packagekit.service          loaded active running PackageKit Daemon
+polkit.service              loaded active running Authorization Manager
+prism.service               loaded active running Prism Visibility Enhancer
+rsyslog.service             loaded active running System Logging Service
+rtkit-daemon.service        loaded active running RealtimeKit Scheduling Policy Service
+smbd.service                loaded active running Samba SMB Daemon
+ssh.service                 loaded active running OpenBSD Secure Shell server
+sssd.service                loaded active running System Security Services Daemon
+switcheroo-control.service  loaded active running Switcheroo Control Proxy service
+systemd-journald.service    loaded active running Journal Service
+systemd-logind.service      loaded active running User Login Management
+systemd-resolved.service    loaded active running Network Name Resolution
+systemd-timesyncd.service   loaded active running Network Time Synchronization
+systemd-udevd.service       loaded active running Rule-based Manager for Device Events and Files
+udisks2.service             loaded active running Disk Manager
+unattended-upgrades.service loaded active running Unattended Upgrades Shutdown
+upower.service              loaded active running Daemon for power management
+user@1001.service           loaded active running User Manager for UID 1001
+vgauth.service              loaded active running Authentication service for virtual machines hosted on VMware
+vsftpd.service              loaded active running vsftpd FTP server
+wpa_supplicant.service      loaded active running WPA supplicant
+zfs-zed.service             loaded active running ZFS Event Daemon (zed)
+Failed to stop nginx.service: Unit nginx.service not loaded.
+Error: Command 'sudo systemctl stop nginx' returned non-zero exit status 5.
+Failed to stop apache2.service: Unit apache2.service not loaded.
+Error: Command 'sudo systemctl stop apache2' returned non-zero exit status 5.
