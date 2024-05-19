@@ -1,3 +1,7 @@
+find / -type f \( -iname "*.mp3" -o -iname "*.mp4" -o -iname "*.mov" -o -iname "*.avi" -o -iname "*.mkv" -o -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.bmp" -o -iname "*.svg" -o -iname "*.wav" -o -iname "*.flac" -o -iname "*.ogg" -o -iname "*.mpg" -o -iname "*.mpeg" -o -iname "*.webm" \)
+
+
+
 `sudo grep -rEI '^\s*(nc|ncat|netcat|socat|bash -i >&)\s+[^(=|:|\+)]' /`
 
 
