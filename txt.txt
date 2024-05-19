@@ -1,3 +1,38 @@
+sudo useradd -m -g boss -G sudo richard
+sudo useradd -m -g boss -G sudo desmond
+sudo useradd -m -g boss -G sudo jess
+sudo useradd -m -g boss -G sudo jess
+
+
+sudo useradd -m -g leaders eyelessdog
+sudo useradd -m -g leaders ghostgirl
+sudo useradd -m -g leaders masked
+sudo useradd -m -g leaders maskhornets
+sudo useradd -m -g leaders nutcracker
+sudo useradd -m -g leaders oldbird
+
+sudo useradd -m -g employees baboonhawk
+sudo useradd -m -g employees bracken
+sudo useradd -m -g employees butler
+sudo useradd -m -g employees circuitbee
+sudo useradd -m -g employees coilhead
+sudo useradd -m -g employees jester
+sudo useradd -m -g employees thumper
+
+
+sudo useradd -m -g part-timers bunkerspider
+sudo useradd -m -g part-timers forestkeeper
+sudo useradd -m -g part-timers snareflea
+
+sudo useradd -m -g interns earthleviathan
+sudo useradd -m -g interns hoardingbug
+sudo useradd -m -g interns hygrodere
+sudo useradd -m -g interns manticoil
+sudo useradd -m -g interns roaminglocust
+sudo useradd -m -g interns sporelizard
+
+
+
 sudo apt-get remove nmap zenmap apache2 nginx lighttpd wireshark tcpdump netcat-traditional nikto ophcrack
 
 
