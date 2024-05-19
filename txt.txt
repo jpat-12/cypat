@@ -1,3 +1,5 @@
+https://gist.github.com/bobpaw/a0b6828a5cfa31cfe9007b711a36082f
+
 sudo sh -c 'echo "allow-guest=false" >> /etc/lightdm/lightdm.conf && systemctl restart lightdm'
 
 
