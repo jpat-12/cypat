@@ -1,35 +1,35 @@
-sudo useradd -m -g boss -G sudo richard
-sudo useradd -m -g boss -G sudo desmond
-sudo useradd -m -g boss -G sudo jess
-sudo useradd -m -g boss -G sudo jess
+sudo usermod -aG sudo richard
+sudo usermod -aG sudo desmond
+sudo usermod -aG sudo jess
+sudo usermod -aG sudo jess
 
 
-sudo useradd -m -g leader eyelessdog
-sudo useradd -m -g leader ghostgirl
-sudo useradd -m -g leader masked
-sudo useradd -m -g leader maskhornets
-sudo useradd -m -g leader nutcracker
-sudo useradd -m -g leader oldbird
+sudo useradd eyelessdog
+sudo useradd ghostgirl
+sudo useradd masked
+sudo useradd maskhornets
+sudo useradd nutcracker
+sudo useradd oldbird
 
-sudo useradd -m -g employee baboonhawk
-sudo useradd -m -g employee bracken
-sudo useradd -m -g employee butler
-sudo useradd -m -g employee circuitbee
-sudo useradd -m -g employee coilhead
-sudo useradd -m -g employee jester
-sudo useradd -m -g employee thumper
+sudo useradd baboonhawk
+sudo useradd bracken
+sudo useradd butler
+sudo useradd circuitbee
+sudo useradd coilhead
+sudo useradd jester
+sudo useradd thumper
 
 
-sudo useradd -m -g part-timer bunkerspider
-sudo useradd -m -g part-timer forestkeeper
-sudo useradd -m -g part-timer snareflea
+sudo useradd bunkerspider
+sudo useradd forestkeeper
+sudo useradd snareflea
 
-sudo useradd -m -g intern earthleviathan
-sudo useradd -m -g intern hoardingbug
-sudo useradd -m -g intern hygrodere
-sudo useradd -m -g intern manticoil
-sudo useradd -m -g intern roaminglocust
-sudo useradd -m -g intern sporelizard
+sudo useradd earthleviathan
+sudo useradd hoardingbug
+sudo useradd hygrodere
+sudo useradd manticoil
+sudo useradd roaminglocust
+sudo useradd sporelizard
 
 
 
