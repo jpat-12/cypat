@@ -1,7 +1,7 @@
-sudo adduser richard
-sudo adduser desmond
-sudo adduser jess
-sudo adduser lucas
+sudo useradd richard
+sudo useradd desmond
+sudo useradd jess
+sudo useradd lucas
 
 sudo usermod -aG sudo richard
 sudo usermod -aG sudo desmond
@@ -9,32 +9,32 @@ sudo usermod -aG sudo jess
 sudo usermod -aG sudo lucas
 
 
-sudo adduser eyelessdog
-sudo adduser ghostgirl
-sudo adduser masked
-sudo adduser maskhornets
-sudo adduser nutcracker
-sudo adduser oldbird
+sudo useradd eyelessdog
+sudo useradd ghostgirl
+sudo useradd masked
+sudo useradd maskhornets
+sudo useradd nutcracker
+sudo useradd oldbird
 
-sudo adduser baboonhawk
-sudo adduser bracken
-sudo adduser butler
-sudo adduser circuitbee
-sudo adduser coilhead
-sudo adduser jester
-sudo adduser thumper
+sudo useradd baboonhawk
+sudo useradd bracken
+sudo useradd butler
+sudo useradd circuitbee
+sudo useradd coilhead
+sudo useradd jester
+sudo useradd thumper
 
 
-sudo adduser bunkerspider
-sudo adduser forestkeeper
-sudo adduser snareflea
+sudo useradd bunkerspider
+sudo useradd forestkeeper
+sudo useradd snareflea
 
-sudo adduser earthleviathan
-sudo adduser hoardingbug
-sudo adduser hygrodere
-sudo adduser manticoil
-sudo adduser roaminglocust
-sudo adduser sporelizard
+sudo useradd earthleviathan
+sudo useradd hoardingbug
+sudo useradd hygrodere
+sudo useradd manticoil
+sudo useradd roaminglocust
+sudo useradd sporelizard
 
 
 
