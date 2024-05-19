@@ -1,3 +1,8 @@
+sudo adduser richard
+sudo adduser desmond
+sudo adduser jess
+sudo adduser lucas
+
 sudo usermod -aG sudo richard
 sudo usermod -aG sudo desmond
 sudo usermod -aG sudo jess
