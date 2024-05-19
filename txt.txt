@@ -1,3 +1,6 @@
+`sudo grep -rEI '^\s*(nc|ncat|netcat|socat|bash -i >&)\s+[^(=|:|\+)]' /`
+
+
 accounts-daemon.service     loaded active running Accounts Service
 acpid.service               loaded active running ACPI event daemon
 ccsclient.service           loaded active running CCS Client Service
